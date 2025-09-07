@@ -1,44 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>charity: water - Clean Water for All</title>
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Use brand fonts if available, fallback to system fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Avenir:400,700|Proxima+Nova:400,700" rel="stylesheet">
+  <!-- Add viewport for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Be the Student Who Starts a Ripple and a Movement.</h1>
-        <p>
-            100% of your gift funds clean water projects worldwide. Join thousands of students proving that impact isn’t just talk — it’s action you can lead, share, and be proud of.
-        </p>
-    </section>
+  <!-- Header: logo on left, buttons on right -->
+  <header class="main-header">
+    <!-- Charity: water logo -->
+    <img src="img/cw_logo-2.png" alt="charity: water logo" class="header-logo">
+    <!-- Header buttons grouped together -->
+    <div class="header-buttons">
+      <a href="#" class="signup-button">Sign Up</a>
+      <a href="https://www.charitywater.org/donate" target="_blank" class="header-donate-button">Donate</a>
+    </div>
+  </header>
 
-    <!-- Story Section -->
-    <section class="story" id="story">
-        <h2>Our Story</h2>
-        <p>
-            We are dedicated to providing clean and safe water to people who need it most. Our mission is to help communities build wells and improve health for families around the world.
-        </p>
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story" id="impact">
-        <h2>Real Impact: Meet Amina</h2>
-        <div class="impact-content">
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+  <!-- Main content: hero on left, mission/impact/call-to-action on right -->
+  <main class="main-content">
+    <!-- Two-column layout: hero left, right-column right -->
+    <div class="columns">
+      <!-- Left column: Hero section -->
+      <section class="hero">
+        <!-- Main heading stays at the top -->
+        <div class="hero-heading">
+          <h1>Be the Student Who Starts a Ripple and a Movement.</h1>
         </div>
-    </section>
+        <!-- Subheading (paragraph) is placed lower using CSS -->
+        <div class="hero-subheading">
+          <p>
+            100% of your gift funds clean water projects worldwide. Join thousands of students proving that impact that impacts isn't just talk - it's action you can lead, share, and be proud of
+          </p>
+        </div>
+      </section>
 
-    <!-- Call-to-Action Section -->
-    <section class="call-to-action" id="donate">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Prove It — Donate.</a>
-    </section>
+      <!-- Right column: mission, impact, call-to-action stacked vertically -->
+      <div class="right-column">
+        <!-- Mission section -->
+        <div class="story">
+          <h2>Our Mission</h2>
+          <p>
+            Charity Water is dedicated to bringing clean and safe drinking water to people in developing countries. We believe that access to clean water is a basic human right, and we work to ensure every community can thrive, stay healthy, and build a better future.
+          </p>
+        </div>
+
+        <!-- Impact section -->
+        <div class="impact">
+          <h2>Impact Story</h2>
+          <div class="impact-content">
+            <img class="impact-image" src="img/Screenshot 2025-09-07 at 1.45.52 AM.png" alt="Samuel grateful for clean water and school">
+            <p>
+              Samuel is a young boy whose life changed when his village received clean water. Instead of spending hours each day collecting water, Samuel now attends school, learns with friends, and dreams of a bright future. He is grateful for the gift of clean water and the chance to learn.
+            </p>
+          </div>
+        </div>
+
+        <!-- Call-to-Action section -->
+        <section class="call-to-action">
+          <h2>Make a Difference</h2>
+          <p>
+            100% of your donation goes directly to clean water projects. Join us and help change lives today!
+          </p>
+          <a class="donate-button" href="https://www.charitywater.org/donate" target="_blank">Prove It - Donate</a>
+        </section>
+      </div>
+    </div>
+  </main>
+  <!-- Footer section starts here -->
+  <footer class="main-footer">
+    <!-- Contact information for students to learn how to add a footer -->
+    <p>Contact Us: (123) 456-7890</p>
+  </footer>
 </body>
 </html>

@@ -12,7 +12,21 @@
    - Pink:       #F16061
 */
 
+/* Colors are already applied throughout the page:
+   - Hero uses #2E9DF7 (Blue) overlay
+   - Story uses #8BD1CB (Light Blue)
+   - Call-to-action uses #FFC907 (Yellow)
+   - Button uses #4FCB53 (Green) and #159A48 (Dark Green) on hover
+   - Headings use #2E9DF7 (Blue)
+*/
+
 /* Global Styles */
+
+/* 
+  Fonts:
+  The landing page uses 'Avenir' and 'Proxima Nova' as the main fonts.
+  If those fonts aren't available, it will use Arial or any sans-serif font.
+*/
 body {
   background-color: #f4f8fb; /* Neutral light backdrop */
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
@@ -22,80 +36,251 @@ body {
   line-height: 1.6;
 }
 
-/* Section Containers */
-section {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
-  margin: 24px 12px;
-  padding: 24px 16px;
+/* Header styles */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2E9DF7;
+  padding: 12px 20px;
+  border-radius: 0; /* No rounded corners in header */
+  margin-bottom: 12px;
 }
 
-/* Hero Section */
+/* Logo image */
+.header-logo {
+  height: 40px;
+  width: auto;
+  border-radius: 0px; /* No rounded corners for logo */
+}
+
+/* Group header buttons together on the right */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Sign Up button */
+.signup-button {
+  background-color: #FFC907; /* Primary Yellow */
+  color: #222;
+  padding: 10px 22px;
+  border-radius: 24px; /* Rounded button corners */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  transition: background 0.2s, transform 0.2s;
+  margin-left: 8px;
+}
+
+.signup-button:hover {
+  background-color: #FF902A; /* Orange */
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Donate button in header */
+.header-donate-button {
+  background-color: #4FCB53; /* Green */
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 24px; /* Rounded button corners */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  margin-left: 8px;
+  margin-right: 0;
+  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.header-donate-button:hover {
+  background-color: #159A48; /* Dark Green */
+  transform: scale(1.05);
+}
+
+/* Section Containers: round all corners */
+section {
+  background: #fff;
+  border-radius: 24px; /* Rounded section corners */
+  box-shadow: 0 4px 16px rgba(46, 157, 247, 0.10); /* Stronger shadow */
+  margin: 12px 6px;    /* Smaller margin */
+  padding: 14px 8px;   /* Smaller padding */
+}
+
+/* Main content layout: no border-radius needed here */
+
+/* Hero section */
 .hero {
+  flex: 1 1 45%;
+  min-width: 280px;
   position: relative;
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
+  background-image: url('img/Screenshot\ 2025-09-07\ at\ 12.19.36\ AM.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
   text-align: center;
-  padding: 60px 20px;
-  border-radius: 0 0 16px 16px;
-
-  /* Blue overlay for readability */
+  padding: 24px 8px 24px 8px; /* Restore larger padding */
+  border-radius: 0 0 24px 24px; /* Rounded bottom corners */
   background-blend-mode: darken;
   background-color: rgba(46, 157, 247, 0.45);
 }
 
+/* Move hero text higher */
+.hero-text {
+  margin-top: 80px; /* Moves text up so less vertical space */
+}
+
 .hero h1 {
-  font-size: 2.5em;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4em;   /* Smaller headline */
   font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.30); /* Stronger shadow */
+  letter-spacing: 1.5px;
+}
+
+/* Hero section main heading stays at the top */
+.hero-heading h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8em; /* Restore previous larger heading */
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.30);
+  letter-spacing: 1.5px;
+}
+
+/* Hero section subheading (paragraph) is lower */
+.hero-subheading {
+  margin-top: 120px; /* Restore previous lower subheading */
+}
+
+.hero-subheading p {
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  line-height: 1.7;
 }
 
 .hero p {
-  font-size: 1.2em;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;     /* Smaller paragraph */
   margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18); /* Stronger shadow */
+  line-height: 1.7;
+}
+
+/* Two-column layout for main content */
+.columns {
+  display: flex; /* Use flexbox for side-by-side columns */
+  gap: 24px;     /* Space between columns */
+  max-width: 1000px;
+  margin: 0 auto;
+  /* Add some padding around the columns */
+  padding: 12px;
+}
+
+/* Left column: hero section */
+.hero {
+  flex: 1 1 45%; /* Take up about 45% of the width */
+  min-width: 280px;
+  position: relative;
+  background-image: url('img/Screenshot\ 2025-09-07\ at\ 12.19.36\ AM.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 24px 8px 24px 8px; /* Restore larger padding */
+  border-radius: 0 0 24px 24px; /* Rounded bottom corners */
+  background-blend-mode: darken;
+  background-color: rgba(46, 157, 247, 0.45);
+}
+
+/* Right column: mission, impact, call-to-action */
+.right-column {
+  flex: 1 1 55%; /* Take up about 55% of the width */
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* Space between stacked sections */
 }
 
 /* Story Section */
 .story {
-  background-color: #8BD1CB; /* Light Blue */
+  background-color: #b2dfdb; /* Slightly deeper light blue */
   color: #222;
   text-align: center;
   padding: 30px 20px;
+  border-radius: 24px; /* Rounded story section corners */
 }
 
-/* Section Headings */
-h2 {
-  color: #2E9DF7; /* Primary Blue */
-  margin-top: 0;
+/* Make all headings stand out more and bigger for beginners */
+.story h2,
+.impact h2,
+.call-to-action h2 {
+  color: #222;
   font-weight: bold;
+  text-align: center;
+  font-size: 2em;   /* Bigger heading */
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(46, 157, 247, 0.18); /* Blue shadow for pop */
+}
+
+/* Make all section paragraphs easier to read */
+.story p,
+.impact p,
+.call-to-action p {
+  font-size: 1em;     /* Smaller paragraph */
+  color: #222;
+  text-align: center;
+  line-height: 1.7;
+  text-shadow: 0 1px 6px rgba(46, 157, 247, 0.10); /* Soft blue shadow */
+}
+
+/* Impact section: round all corners */
+.impact {
+  background-color: #d6eaf8; /* Slightly deeper blue for more pop */
+  /* Keep rounded corners and padding for consistency */
+  border-radius: 24px; /* Rounded impact section corners */
+  padding: 14px 8px;
+  margin: 12px 6px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
 }
 
 /* Impact Story */
 .impact-image {
   width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
+  max-width: 180px; /* Smaller image */
+  border-radius: 24px; /* Rounded image corners */
+  margin-bottom: 10px;
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
 }
 
-.impact-content p {
-  max-width: 420px;
+/* Impact section spacing */
+.impact {
+  /* No extra styles needed, but you can add margin-top if you want more space */
 }
 
 /* Call-to-Action Section */
 .call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
+  background-color: #FFD700; /* Brighter yellow */
   color: #222;
   text-align: center;
-  padding: 30px 20px;
+  padding: 14px 8px;
+  max-width: 350px;    /* Smaller max-width */
+  margin: 12px 0 0 0; /* Less top margin since it's inside the column */
+  border-radius: 24px; /* Rounded call-to-action corners */
 }
 
 /* Donate Button */
@@ -103,12 +288,12 @@ h2 {
   display: inline-block;
   background-color: #4FCB53; /* Green */
   color: #fff;
-  padding: 14px 32px;
+  padding: 8px 16px;    /* Smaller padding */
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 24px; /* Rounded donate button corners */
   font-weight: bold;
-  font-size: 1.2em; /* Slightly larger for emphasis */
-  margin-top: 18px;
+  font-size: 1em;        /* Smaller font size */
+  margin-top: 10px;
   box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
   transition: background 0.3s, transform 0.2s;
   border: none;
@@ -125,11 +310,81 @@ h2 {
   outline-offset: 3px;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+/* Footer styles for beginners */
+.main-footer {
+  /* Center the footer text */
+  text-align: center;
+  /* Add some padding above and below the text */
+  padding: 16px 0;
+  /* Use the charity: water brand blue for the background */
+  background-color: #2E9DF7;
+  /* Make the text white for good contrast */
+  color: #fff;
+  /* Remove the top border since the blue background stands out */
+  border-top: none;
+  /* Add margin to the top so it doesn't stick to the content */
+  margin-top: 24px;
+  /* Use a simple font for beginners */
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 800px) {
+  .columns {
+    flex-direction: column; /* Stack columns vertically on small screens */
+    gap: 0;
+    max-width: 98vw;
+    padding: 4px;
+  }
   .hero {
-    padding: 32px 8px;
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .right-column {
+    width: 100%;
+    gap: 8px;
+  }
+  .call-to-action {
+    margin-top: 8px;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 10px;
+  }
+
+  .header-logo {
+    margin-bottom: 10px;
+  }
+
+  .header-buttons {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .signup-button,
+  .header-donate-button {
     font-size: 1em;
+    padding: 10px 16px;
+    margin-left: 0;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  /* Make hero section smaller for mobile */
+  .hero {
+    padding: 12px 4px;
+  }
+
+  .hero-text {
+    margin-top: 40px;
   }
 
   .hero h1 {
@@ -140,34 +395,92 @@ h2 {
     font-size: 1em;
   }
 
+  /* Reduce padding for story and call-to-action sections */
   .story,
   .call-to-action {
-    padding: 14px 8px;
+    padding: 8px 4px;
   }
 
+  /* Stack impact image and text vertically */
   .impact-content {
     display: block;
     text-align: center;
   }
 
   .impact-image {
-    width: 90%;
-    max-width: 220px;
+    max-width: 120px;
+    border-radius: 24px; /* Rounded image corners for mobile */
   }
 }
 
+/* For larger screens (desktop/tablet) */
 @media (min-width: 601px) {
+  /* Keep header layout horizontal */
+  .main-header {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 20px;
+  }
+
+  .header-logo {
+    margin-bottom: 0;
+  }
+
+  .header-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .signup-button,
+  .header-donate-button {
+    font-size: 1em;
+    padding: 10px 22px;
+    margin-left: 8px;
+    margin-bottom: 0;
+  }
+
+  /* Impact section: image left, text right for desktop/tablet */
   .impact-content {
-    display: flex;
+    display: flex; /* Show image and text side by side */
+    flex-direction: row; /* Image left, text right */
     align-items: center;
     justify-content: center;
-    gap: 28px;
-    text-align: left;
+    text-align: left; /* Text aligns left for readability */
+    gap: 24px; /* Space between image and text */
     max-width: 800px;
     margin: 0 auto;
   }
 
   .impact-image {
-    width: 300px;
+    width: 180px; /* Image size for desktop */
+    max-width: 180px;
+    margin-bottom: 0; /* Remove bottom margin for side-by-side */
+  }
+
+  .impact-content p {
+    flex: 1;
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Text aligns left */
   }
 }
+
+/* 
+  If you want to use other brand colors for accents, 
+  you can add classes like .accent-orange, .accent-red, etc.
+  Example:
+  .accent-orange { color: #FF902A; }
+  .accent-red { color: #F5402C; }
+  .accent-pink { color: #F16061; }
+*/
+  .accent-orange { color: #FF902A; }
+  .accent-red { color: #F5402C; }
+  .accent-pink { color: #F16061; }
+*/
+  .accent-orange { color: #FF902A; }
+  .accent-red { color: #F5402C; }
+  .accent-pink { color: #F16061; }
+  .accent-pink { color: #F16061; }
+*/
+  .accent-orange { color: #FF902A; }
+  .accent-red { color: #F5402C; }
+  .accent-pink { color: #F16061; }
